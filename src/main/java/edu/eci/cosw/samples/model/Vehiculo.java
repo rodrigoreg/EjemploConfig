@@ -59,12 +59,12 @@ public class Vehiculo implements java.io.Serializable {
 		this.capacidad = capacidad;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "almVehiculos")
-	public Set<Despacho> getAlmDespachoses() {
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "vehiculos")
+	public Set<Despacho> getDespachos() {
 		return this.almDespachoses;
 	}
 
-	public void setAlmDespachoses(Set<Despacho> almDespachoses) {
+	public void setDespachos(Set<Despacho> almDespachoses) {
 		this.almDespachoses = almDespachoses;
 	}
 

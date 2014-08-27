@@ -72,12 +72,12 @@ public class Producto implements java.io.Serializable {
 		this.precio = precio;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "almProductos")
-	public Set<DetallePedido> getAlmDetallesPedidos() {
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "producto")
+	public Set<DetallePedido> getDetallesPedidos() {
 		return this.almDetallesPedidos;
 	}
 
-	public void setAlmDetallesPedidos(Set<DetallePedido> almDetallesPedidos) {
+	public void setDetallesPedidos(Set<DetallePedido> almDetallesPedidos) {
 		this.almDetallesPedidos = almDetallesPedidos;
 	}
 

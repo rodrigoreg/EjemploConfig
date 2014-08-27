@@ -51,11 +51,11 @@ public class DetallePedido implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "PRODUCTOS_idproducto", nullable = false, insertable = false, updatable = false)
-	public Producto getAlmProductos() {
+	public Producto getProducto() {
 		return this.almProductos;
 	}
 
-	public void setAlmProductos(Producto almProductos) {
+	public void setProducto(Producto almProductos) {
 		this.almProductos = almProductos;
 	}
 

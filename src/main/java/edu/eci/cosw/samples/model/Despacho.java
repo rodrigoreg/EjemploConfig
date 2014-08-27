@@ -57,21 +57,21 @@ public class Despacho implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "PEDIDOS_idpedido", nullable = false)
-	public Pedido getAlmPedidos() {
+	public Pedido getPedidos() {
 		return this.almPedidos;
 	}
 
-	public void setAlmPedidos(Pedido almPedidos) {
+	public void setPedidos(Pedido almPedidos) {
 		this.almPedidos = almPedidos;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "VEHICULOS_placa", nullable = false)
-	public Vehiculo getAlmVehiculos() {
+	public Vehiculo getVehiculos() {
 		return this.almVehiculos;
 	}
 
-	public void setAlmVehiculos(Vehiculo almVehiculos) {
+	public void setVehiculos(Vehiculo almVehiculos) {
 		this.almVehiculos = almVehiculos;
 	}
 
