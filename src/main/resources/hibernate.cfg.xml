@@ -5,9 +5,9 @@
  <session-factory>
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
   <property name="hibernate.connection.password">bdprueba</property>
-  <property name="hibernate.connection.url">jdbc:mysql://desarrollo.is.escuelaing.edu.co/bdprueba</property>
-  <property name="hibernate.connection.username">bdprueba</property>
-  <property name="hibernate.default_schema">bdprueba</property>
+  <property name="hibernate.connection.url">jdbc:mysql://aaaaaaaaa</property>
+  <property name="hibernate.connection.username">bbbbbbbb</property>
+  <property name="hibernate.default_schema">ccccccc</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
   <mapping class="edu.eci.cosw.samples.model.Cliente"/>
