@@ -36,30 +36,9 @@ public class ModuloPrueba {
 	
             Transaction tx=s.beginTransaction();
             
-            //Query q=s.createQuery("select distinct(desp.vehiculo) from Despacho as desp inner join desp.pedidos as p inner join p.detallesPedidos as dp    where dp.producto.idproducto=:idp");
-                        
-            Query q=s.createQuery("from Pedido p where p.idpedido=:idp");
             
-            q.setInteger("idp", 10039);
-            List l=q.list();
-            
-            Pedido p=(Pedido)l.get(0);
-            
+            tx.commit();
             s.close();
-            
-            //System.out.println(l.size());
-            for (DetallePedido dp:p.getDetallesPedidos()){
-                System.out.println(dp);
-            }
-            
-            
-            //for (Object o:l){
-            //    System.out.println(o);
-            //}
-            
-            //registrarPedido(s,999,new int[]{1,2,3,4},new int[]{3,2,4,3},d);
-            
-            //tx.commit();
             
             
 	}
@@ -73,22 +52,7 @@ public class ModuloPrueba {
 	 * @param cantidades conjunto de cantidades de los productos pedidos. La cantidad i, ser� entonces, 
 	 *        la cantidad asociada al producto i.
 	 */
-	public static void registrarPedido(Session s, int idCliente, int[] identificadoresProductos, int[] cantidades, Date fecha){
-            
-            Cliente c=(Cliente)s.load(Cliente.class, idCliente);
-            Pedido p=new Pedido(c,fecha);
-            
-            s.save(p);
-            
-            for (int i=0;i<identificadoresProductos.length;i++){
-                Producto prod=(Producto)s.load(Producto.class, identificadoresProductos[i]);
-                DetallePedidoId dpid=new DetallePedidoId(prod.getIdproducto(),p.getIdpedido());
-                DetallePedido dp=new DetallePedido(dpid,prod,cantidades[i]);
-                
-                p.addDetallePedido(dp);
-            }
-            
-            s.saveOrUpdate(p);
+	public static void registrarPedido(Session s, int idCliente, int[] identificadoresProductos, int[] cantidades, Date fecha){            
             
 	}
 	
