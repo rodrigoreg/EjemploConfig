@@ -67,11 +67,11 @@ public class Despacho implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "VEHICULOS_placa", nullable = false)
-	public Vehiculo getVehiculos() {
+	public Vehiculo getVehiculo() {
 		return this.almVehiculos;
 	}
 
-	public void setVehiculos(Vehiculo almVehiculos) {
+	public void setVehiculo(Vehiculo almVehiculos) {
 		this.almVehiculos = almVehiculos;
 	}
 
