@@ -9,15 +9,8 @@ import java.util.Date;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
-import edu.eci.cosw.samples.model.Cliente;
-import edu.eci.cosw.samples.model.DetallePedido;
-import edu.eci.cosw.samples.model.DetallePedidoId;
-import edu.eci.cosw.samples.model.Pedido;
-import edu.eci.cosw.samples.model.Producto;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
