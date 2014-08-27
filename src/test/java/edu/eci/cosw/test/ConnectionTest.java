@@ -7,6 +7,7 @@
 package edu.eci.cosw.test;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
@@ -26,8 +27,9 @@ public class ConnectionTest {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.cfg.xml");
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
-            sf = configuration.buildSessionFactory(serviceRegistry);                    
-            sf.openSession();
+            sf = configuration.buildSessionFactory(serviceRegistry);               
+            Session s=sf.openSession();            
+            s.createQuery("from Pedido").list().size();
         }
         catch (Throwable e){
             fail("Error en la configuración de la conexión:"+e.getLocalizedMessage());
