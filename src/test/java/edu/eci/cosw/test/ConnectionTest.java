@@ -40,5 +40,11 @@ public class ConnectionTest {
             }
         }
     }
+
+
+    @Test
+    public void testTwo(){
+	fail("error 123");
+    }
     
 }
