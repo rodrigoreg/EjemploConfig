@@ -51,6 +51,7 @@
         <artifactId>cobertura-maven-plugin</artifactId>
         <version>2.4</version>
         <configuration>
+          <outputDirectory>$CIRCLE_ARTIFACTS/cobertura</outputDirectory>
           <instrumentation>
             <includes>
               <include>target/classes/**/*.class</include>
