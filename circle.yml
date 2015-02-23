@@ -6,6 +6,6 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: https://github.com/rodrigoreg/EjemploConfig.git
+      appname: thawing-badlands-5963
     
 
