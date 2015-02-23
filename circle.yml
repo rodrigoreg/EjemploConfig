@@ -6,6 +6,6 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: maven-hibernate-prod-orders 
+      appname: https://github.com/rodrigoreg/EjemploConfig.git
     
 
