@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
 /**
  *
  * @author hcadavid
+ * @author Rodrigo 
  */
 public class ConnectionTest {
     
