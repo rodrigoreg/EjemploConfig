@@ -19,7 +19,10 @@ import org.hibernate.cfg.Configuration;
 
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
-
+/**
+ * @autor Rodrigo
+ * 
+ **/
 public class ModuloPrueba {
 
 	public static void main(String[] args) throws ParseException {
